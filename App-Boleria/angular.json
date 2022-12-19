@@ -31,8 +31,16 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": []
+            "styles": [
+              "src/theme/variables.scss", 
+              "src/global.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/materialize-css/dist/css/materialize.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/materialize-css/dist/js/materialize.js"
+            ]
           },
           "configurations": {
             "production": {
