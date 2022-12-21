@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Receita } from 'src/app/core/models/receita.models';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
+  itens: Receita[] = []
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  
 
 }

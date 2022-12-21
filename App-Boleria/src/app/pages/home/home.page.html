@@ -1,12 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title >Home</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<H1>Hello world</H1>
-<ion-content>
+
+<ion-content [fullscreen]="true">
+  <div id="container01" class="container">
+    <ion-text>
+      <h5 class="text-center">Bem vindo(a)!</h5>
+      <p>
+        <ion-text class="yellow-text">Aqui você encontrará receitas de bolos para fazer no conforto do seu lar, 
+        também temos uma seção de login onde é permitido a postagem de novas receitas
+        de bolo no App.</ion-text>
+      </p>
+    </ion-text>
+  </div>
+  <hr>
+  <div id="container02" class="container">
+    <ion-text><h6>Lista de receitas</h6></ion-text>
+    <ion-list>
+      <ion-item-sliding *ngFor="let receita of itens; index as i">
+        <ion-item>
+          <ion-label><strong>Bolo de</strong>{{receita.nome}}</ion-label>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
 
 </ion-content>
