@@ -15,6 +15,7 @@ import { VisualizarPage } from './visualizar.page';
     IonicModule,
     VisualizarPageRoutingModule
   ],
-  declarations: [VisualizarPage]
+  declarations: [VisualizarPage],
+  exports:[VisualizarPage]
 })
 export class VisualizarPageModule {}

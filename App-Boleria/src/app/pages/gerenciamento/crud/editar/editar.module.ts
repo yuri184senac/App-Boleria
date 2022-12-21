@@ -15,6 +15,7 @@ import { EditarPage } from './editar.page';
     IonicModule,
     EditarPageRoutingModule
   ],
-  declarations: [EditarPage]
+  declarations: [EditarPage],
+  exports:[EditarPage]
 })
 export class EditarPageModule {}

@@ -7,13 +7,19 @@ import { IonicModule } from '@ionic/angular';
 import { GerenciamentoPageRoutingModule } from './gerenciamento-routing.module';
 
 import { GerenciamentoPage } from './gerenciamento.page';
+import { CadastrarPageModule } from './crud/cadastrar/cadastrar.module';
+import { EditarPageModule } from './crud/editar/editar.module';
+import { VisualizarPageModule } from './crud/visualizar/visualizar.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GerenciamentoPageRoutingModule
+    GerenciamentoPageRoutingModule,
+    CadastrarPageModule,
+    EditarPageModule,
+    VisualizarPageModule
   ],
   declarations: [GerenciamentoPage]
 })

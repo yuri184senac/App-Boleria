@@ -27,18 +27,15 @@
     <div [ngSwitch]="crud">
       
       <div *ngSwitchCase="'0'">
-        <h1>Tutorials</h1>
-        <p>Learn from examples.</p>
+        <app-cadastrar></app-cadastrar>
       </div>
 
       <div *ngSwitchCase="'1'">
-        <h1>Cars</h1>
-        <p>Read about cars.</p>
+        <app-editar></app-editar>
       </div>
 
       <div *ngSwitchCase="'2'">
-        <h1>Cars</h1>
-        <p>Read about cars.</p>
+       <app-visualizar></app-visualizar>
       </div>
 
     </div>

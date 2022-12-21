@@ -33,16 +33,13 @@ export class GerenciamentoPage implements OnInit {
     
     switch(value) {
       case 0:
-        this.crud = 0        
-        console.log("0")
+        this.crud = 0                
         break;
       case 1:
-        this.crud = 1   
-        console.log("1")
+        this.crud = 1         
         break;
       case 2:
-        this.crud = 2
-        console.log("2")        
+        this.crud = 2           
         break;
     }
   }
