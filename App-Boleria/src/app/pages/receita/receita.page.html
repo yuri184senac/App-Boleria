@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>receita</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="container">
+    
+    <ion-title class="text-center">{{produto.nome}}</ion-title>
+    <ion-img [src]=produto.img alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>  
+  <hr>
+  <ion-text><h6>Ingredientes:</h6></ion-text>
+  <ion-text>{{produto.ingr}}</ion-text>
+  <br>
+  <br>
+  <ion-text><h6>Modo de preparo:</h6></ion-text>
+  <ion-text>{{produto.preparo}}</ion-text>
+  </div>
 </ion-content>

@@ -17,11 +17,21 @@ export class BancoService {
 
   constructor(private http: HttpClient) { }
 
-  insertItem(produto: any) {
-    return this.http.post(this.API, JSON.stringify(produto), this.httpOptions).subscribe();
+  insertItem(receita: any) {
+    return this.http.post(this.API, JSON.stringify(receita), this.httpOptions).subscribe();
   }
 
   getAllItem() {
     return this.http.get<Receita[]>(this.API);
   }
+
+  getItem(id: Number) {
+    return this.http.get<Receita>(this.API + id)
+  }
+
+  updateItem(receita: Receita) {
+    return this.http.put(this.API + receita.id, JSON.stringify(receita), this.httpOptions).subscribe();
+  }
+
+
 }
