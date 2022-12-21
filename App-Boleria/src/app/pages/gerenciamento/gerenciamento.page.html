@@ -8,5 +8,39 @@
 </ion-header>
 
 <ion-content>
+ 
+  <div id =container01 class="container">
+    <h6>Olá Yuri,</h6>
+    <h6>Selecione a ação que deseja:</h6>
+    <ion-list>
+      <ion-item>
+          <ion-select placeholder="Selecione o tipo" (ionChange)="handleChange($event)">
+            <ion-select-option *ngFor="let o of option" [value]="o.value">
+              {{o.name}}
+            </ion-select-option>          
+          </ion-select>
+      </ion-item>
+    </ion-list>    
+  </div>
+  <hr>
+  <div class="container">
+    <div [ngSwitch]="crud">
+      
+      <div *ngSwitchCase="'0'">
+        <h1>Tutorials</h1>
+        <p>Learn from examples.</p>
+      </div>
 
+      <div *ngSwitchCase="'1'">
+        <h1>Cars</h1>
+        <p>Read about cars.</p>
+      </div>
+
+      <div *ngSwitchCase="'2'">
+        <h1>Cars</h1>
+        <p>Read about cars.</p>
+      </div>
+
+    </div>
+  </div>
 </ion-content>

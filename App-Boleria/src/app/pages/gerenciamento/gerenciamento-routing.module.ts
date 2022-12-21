@@ -7,7 +7,19 @@ const routes: Routes = [
   {
     path: '',
     component: GerenciamentoPage
+  },  {
+    path: 'cadastrar',
+    loadChildren: () => import('./crud/cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
+  },
+  {
+    path: 'editar',
+    loadChildren: () => import('./crud/editar/editar.module').then( m => m.EditarPageModule)
+  },
+  {
+    path: 'visualizar',
+    loadChildren: () => import('./crud/visualizar/visualizar.module').then( m => m.VisualizarPageModule)
   }
+
 ];
 
 @NgModule({

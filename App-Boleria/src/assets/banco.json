@@ -1,0 +1,22 @@
+{
+    "receitas": [
+        {
+            "nome": "Fubá",
+            "img": "https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2021/01/04/bolo-ingles-de-laranja-30805-1024x720.jpg",
+            "ingr": "Leite",
+            "preparo": "Forno"
+        },
+        {
+            "nome": "Fubá",
+            "img": "Imagem",
+            "ingr": "Leite",
+            "preparo": "Forno"
+        },
+        {
+            "nome": "Fubá",
+            "img": "Imagem",
+            "ingr": "Leite",
+            "preparo": "Forno"
+        }
+    ]
+}

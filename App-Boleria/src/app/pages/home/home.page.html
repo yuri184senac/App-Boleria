@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <div id="container01" class="container">
     <ion-text>
       <h5 class="text-center">Bem vindo(a)!</h5>
@@ -21,11 +21,26 @@
   <hr>
   <div id="container02" class="container">
     <ion-text><h6>Lista de receitas</h6></ion-text>
-    <ion-list>
+    <ion-list class=>
       <ion-item-sliding *ngFor="let receita of itens; index as i">
         <ion-item>
-          <ion-label><strong>Bolo de</strong>{{receita.nome}}</ion-label>
+          <ion-card>
+            <ion-card-header class="cardBolo">
+              <ion-card-title class="textStyle">Bolo de {{receita.nome}}</ion-card-title>
+              <img class="cardsImg" [src]="receita.img" alt="">
+              <ion-card-subtitle><p>{{receita.ingr}}</p></ion-card-subtitle>
+            </ion-card-header>
+            <!-- <ion-card-content>
+              <p>{{receita.preparo}}</p>
+            </ion-card-content>   -->
+          </ion-card>
         </ion-item>
+
+        <ion-item-options>
+            <ion-item-option color="primary"  [routerLink]="['/receita', receita.id]">
+              <ion-icon name="arrow-forward" style="width: 18px; height: 20px"></ion-icon>    
+            </ion-item-option>
+        </ion-item-options>
       </ion-item-sliding>
     </ion-list>
   </div>
