@@ -7,12 +7,13 @@ const routes: Routes = [
   {
     path: '',
     component: GerenciamentoPage
-  },  {
+  },
+  {
     path: 'cadastrar',
     loadChildren: () => import('./crud/cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
   },
   {
-    path: 'editar',
+    path: 'editar/:id',
     loadChildren: () => import('./crud/editar/editar.module').then( m => m.EditarPageModule)
   },
   {

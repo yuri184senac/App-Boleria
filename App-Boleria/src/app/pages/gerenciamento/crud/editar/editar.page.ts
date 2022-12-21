@@ -10,6 +10,7 @@ import { BancoService } from 'src/app/core/services/banco.service';
 export class EditarPage implements OnInit {
   routerId = null; 
   receita: any = { };
+  results: any = {};
   constructor(
     private route: ActivatedRoute,
     private db: BancoService 
@@ -18,8 +19,7 @@ export class EditarPage implements OnInit {
   ngOnInit() {
     this.routerId = this.route.snapshot.params['id'];
     if(this.routerId) {
-      this.db.getItem(this.routerId).subscribe(caixa => {this.receita = caixa}); //a caixa ja é do tipo pro produto por conta da tipagem do método no banco.service
+      this.db.getItem(this.routerId).subscribe(caixa => {this.results = caixa}); //a caixa ja é do tipo pro produto por conta da tipagem do método no banco.service
     }
   }
-
 }

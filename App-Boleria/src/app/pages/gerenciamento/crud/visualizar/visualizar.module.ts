@@ -7,9 +7,11 @@ import { IonicModule } from '@ionic/angular';
 import { VisualizarPageRoutingModule } from './visualizar-routing.module';
 
 import { VisualizarPage } from './visualizar.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
+    HttpClientModule,
     CommonModule,
     FormsModule,
     IonicModule,

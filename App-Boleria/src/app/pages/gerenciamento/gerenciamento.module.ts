@@ -19,7 +19,7 @@ import { VisualizarPageModule } from './crud/visualizar/visualizar.module';
     GerenciamentoPageRoutingModule,
     CadastrarPageModule,
     EditarPageModule,
-    VisualizarPageModule
+    VisualizarPageModule,
   ],
   declarations: [GerenciamentoPage]
 })

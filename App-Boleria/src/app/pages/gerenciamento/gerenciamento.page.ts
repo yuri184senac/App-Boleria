@@ -15,13 +15,10 @@ export class GerenciamentoPage implements OnInit {
       value: 0 
     },
     {
-      name: "Editar",  
+      name: "Visualizar",  
       value: 1
-    },
-    {
-      name: "Visualizar/Excluir",    
-      value: 2
     }
+  
   ]
 
   constructor() { }
@@ -37,9 +34,6 @@ export class GerenciamentoPage implements OnInit {
         break;
       case 1:
         this.crud = 1         
-        break;
-      case 2:
-        this.crud = 2           
         break;
     }
   }

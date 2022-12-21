@@ -1,9 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>visualizar</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
-
-</ion-content>
+<div class="container">
+  <ion-item *ngFor="let receita of itens; index as i">
+    <ion-card>
+      <ion-card-header class="cardBolo">        
+        <ion-card-title class="textStyle">Bolo de {{receita.nome}}</ion-card-title>
+        <img class="cardsImg" [src]="receita.img" alt="">
+        <ion-card-subtitle><p>{{receita.ingr}}</p></ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{receita.preparo}}</p>
+      </ion-card-content>        
+      <ion-button color="danger"(click)="deletarItem(receita.id)"><ion-icon name="trash-outline" style="width: 30px; height: 20px" ></ion-icon></ion-button> <!--Botão--> 
+      <ion-button color="primary" [routerLink]="['editar/', receita.id]" ><ion-icon name="refresh-outline" style="width: 20px; height: 20px"></ion-icon></ion-button> <!--Botão--> 
+    </ion-card>   
+  </ion-item>
+  
+</div>

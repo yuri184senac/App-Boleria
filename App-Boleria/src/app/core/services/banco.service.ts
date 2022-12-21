@@ -33,5 +33,9 @@ export class BancoService {
     return this.http.put(this.API + receita.id, JSON.stringify(receita), this.httpOptions).subscribe();
   }
 
+  deleteItem(id: number) {
+    return this.http.delete(this.API + id).subscribe()
+  }
+
 
 }
