@@ -28,9 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/receita/receita.module').then( m => m.ReceitaPageModule)
   },
   {
-    path: 'cadastrase',
-    loadChildren: () => import('./pages/cadastrase/cadastrase.module').then( m => m.CadastrasePageModule)
-  }
+    path: 'cadastro-login',
+    loadChildren: () => import('./pages/cadastro-login/cadastro-login.module').then( m => m.CadastroLoginPageModule)
+  },
+
 
   
 
