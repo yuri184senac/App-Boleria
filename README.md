@@ -3,12 +3,18 @@
 Projeto atual
 Banco de dados: Json-server.
 
-Estrutura do banco: 
+Estrutura do banco: </br> 
+Login:
+<ul>
+	<li>Usuário</li>
+	<li>Senha</li>
+</ul>
 Receita :
-	.Imagem
-	.Ingredientes
-	.Modo de preparo
-
+<ul>
+	<li>Imagem</li>
+	<li>Ingredientes</li>
+	<li>Modo de preparo</li>
+</ul>
 Frameworks de estilização: Bootstrap e Materialize.
 
 Páginas:
