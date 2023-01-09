@@ -14,21 +14,21 @@ export class CadastroLoginPage implements OnInit {
 
   ngOnInit() {
   }
-  // register(form: any) {
-  //   const usuario: Login  = {     
-  //     nome: form.value.nome,
-  //     login: form.value.login,
-  //     senha: form.value.senha,
-  //     perfil: form.value.perfil
-  //   }
-  //   try {
-  //     this.db.insertItem(usuario)
-  //   }
-  //   catch(err) {
-  //     console.log(err)
-  //   }
-  //   finally {
-  //     this.utility.toastando('Cadastrado com sucesso', 'success', 'top', 2000);
-  //   }      
-  // }
+  register(form: any) {
+    const usuario: Login  = {     
+      nome: form.value.nome,
+      login: form.value.login,
+      senha: form.value.senha,
+      perfil: form.value.perfil
+    }
+    try {
+      this.db.insertItem(usuario)
+    }
+    catch(err) {
+      console.log(err)
+    }
+    finally {
+      this.utility.toastando('Cadastrado com sucesso', 'success', 'top', 2000);
+    }      
+  }
 }

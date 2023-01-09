@@ -7,7 +7,7 @@
 <ion-content>
   <div class="container">
     <div class="row">
-      <form #form="ngForm"  class="col s12">
+      <form #form="ngForm" (ngSubmit)="register(form)" class="col s12">
        <div class="row">
           <div class="input-field col s12">
             <input id="nome" type="text" class="validate" name="nome" ngModel>
@@ -30,13 +30,13 @@
         </div>
         
         <div class="row">
-          <select class="browser-default col-4" id="estado" name="estado" formControlName="estado" required>
+          <select class="browser-default col-4" id="perfil" name="perfil" ngModel required>
             <option value="" disabled selected>Selecionar perfil</option>
             <option value="user">Usuário</option>
             <option value="profissional">Profissional</option>
           </select>
         </div>
-
+        <ion-button type="submit" color="success" expand="block">Cadastrar</ion-button>
       </form>
     </div>
   </div>
