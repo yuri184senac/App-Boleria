@@ -35,6 +35,4 @@ export class VisualizarPage implements OnInit {
     console.log(id)
     // this.router.navigate(['/gerenciamento/'+id]);
   }
-
-
 }
