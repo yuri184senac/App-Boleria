@@ -2,12 +2,35 @@
   <ion-toolbar>
     <ion-title>Editar Receita</ion-title>
   </ion-toolbar>
-
 </ion-header>
 
 <div class="container">
     <form #form="ngForm" (ngSubmit)="update(form)">
-      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="nome" type="text" class="validate" name="nome" [ngModel]="receita.nome" ngModel>
+          <span class="helper-text" data-error="wrong" data-success="right">incluir o nome do bolo</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="img" type="text" class="validate" name="img" [ngModel]="receita.img" ngModel>               
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="ingr" type="text" class="validate" name="ingr" [ngModel]="receita.ingr" ngModel>                   
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="preparo" type="text" class="validate" name="preparo" [ngModel]="receita.preparo" ngModel>              
+        </div>
+      </div>
+      <ion-button type="submit" color="primary" expand="block">Atualizar</ion-button>
     </form>
 </div>
 

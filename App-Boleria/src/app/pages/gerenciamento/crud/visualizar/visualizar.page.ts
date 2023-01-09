@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Receita } from 'src/app/core/models/receita.models';
 import { BancoService } from 'src/app/core/services/banco.service';
+import { UtilityService } from 'src/app/core/services/utility.service';
 
 @Component({
   selector: 'app-visualizar',
@@ -10,7 +11,7 @@ import { BancoService } from 'src/app/core/services/banco.service';
 })
 export class VisualizarPage implements OnInit {
   itens: Receita[] = [] 
-  constructor( private db: BancoService, private router: Router) { }
+  constructor( private db: BancoService, private router: Router, private utility: UtilityService) { }
 
   ngOnInit() {
     this.db.getAllItem().subscribe(result => {this.itens = result});
@@ -24,7 +25,7 @@ export class VisualizarPage implements OnInit {
     }catch(err) {
       console.log(err);
     }finally {
-      // this.utility.toastando('Item deletado','danger', 'bottom',  2000, );
+       this.utility.toastando('Item deletado','danger', 'bottom',  2000, );
       // setTimeout(this.refresh, 2000);      
     }
     

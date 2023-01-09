@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Receita } from 'src/app/core/models/receita.models';
 import { BancoService } from 'src/app/core/services/banco.service';
+import { UtilityService } from 'src/app/core/services/utility.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -10,7 +11,9 @@ import { BancoService } from 'src/app/core/services/banco.service';
 export class CadastrarPage implements OnInit {
 
   constructor(
-    private db: BancoService
+    private db: BancoService,
+    private utility: UtilityService,
+    
   ) { }
 
   ngOnInit() {
@@ -23,7 +26,19 @@ export class CadastrarPage implements OnInit {
       ingr: form.value.ingr,
       preparo: form.value.preparo
     }
-    console.log(item)
-    this.db.insertItem(item)
+    try {
+      this.db.insertItem(item)
+    }
+    catch(err) {
+      console.log(err)
+    }
+    finally {
+      this.utility.toastando('Cadastrado com sucesso', 'success', 'top', 2000);
+      setTimeout(this.refresh, 2000)
+    }      
+  }
+
+  refresh(){
+    location.reload()
   }
 }
