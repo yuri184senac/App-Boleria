@@ -8,7 +8,7 @@ export class AppComponent {  //POR ENQUANTO VOU DEIXAR A PÁGINA FOLDER COMO EXE
   public appPages = [
     { title: 'Home', url: '/home', icon: 'heart' }, //na url eu vou por a página que eu criei 
     { title: 'Login', url: '/login', icon: 'mail' },
-    { title: 'Gerenciamento', url: '/gerenciamento', icon: 'paper-plane' }   
+    { title: 'Gerenciamento', url: '/gerenciamento', icon: 'paper-plane' }
   ];
 
   constructor() {}

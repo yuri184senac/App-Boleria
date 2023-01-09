@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cadastrase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="row">
+      <form #form="ngForm" (ngSubmit)="register(form)" class="col s12">
+       <div class="row">
+          <div class="input-field col s12">
+            <input id="nome" type="text" class="validate" name="nome" ngModel>
+            <label for="nome">Nome</label>        
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="login" type="text" class="validate" name="login" ngModel>
+            <label for="nome">Login</label>          
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="senha" type="password" class="validate" name="senha" ngModel>
+            <label for="nome">Senha</label>         
+          </div>
+        </div>
+        
+        <div class="row">
+          <select class="browser-default col-4" id="estado" name="estado" formControlName="estado" required>
+            <option value="" disabled selected>Selecionar perfil</option>
+            <option value="user">Usuário</option>
+            <option value="profissional">Profissional</option>
+          </select>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</ion-content>

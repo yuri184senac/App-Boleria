@@ -26,7 +26,12 @@ const routes: Routes = [
   {
     path: 'receita/:id',
     loadChildren: () => import('./pages/receita/receita.module').then( m => m.ReceitaPageModule)
+  },
+  {
+    path: 'cadastrase',
+    loadChildren: () => import('./pages/cadastrase/cadastrase.module').then( m => m.CadastrasePageModule)
   }
+
   
 
 ];
